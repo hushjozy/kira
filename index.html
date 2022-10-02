@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <title>JSchallenge</title>
+
+    <!-- ::::::LINKS:::::: -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+
+
+
+    <!-- :::::ICONS LINK FROM LOCAL TEMPLATE SOURCE OFFLINE:::::: -->
+	<link rel="stylesheet" href="file:///C:/Users/User/Desktop/iTins/icons/fontawesome-free-6.1.1-web/css/all.css">
+
+
+    <!-- :::::::::::ICONS-LINK ONLINE:::::::::::::::::: -->
+    <script src="https://kit.fontawesome.com/2bbbf54a3f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <nav>
+            <label for="logo">
+                <i class="fas fa-dice-three"></i>
+                <p>Kira</p>
+                <i class="fas fa-bars" onclick="showMenu()"></i>
+            </label>
+            <ul id="navMenu">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <li><a href="">New arrival</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Stories</a></li>
+                <li><a href="">Creative art</a></li>
+            </ul>
+            <aside>
+                <div class="input">
+                    <input type="text" placeholder="Search Item">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                    <p>0</p>
+                </div>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+1 912-252-7350">+1 912-252-7350</a>
+            </aside>
+        </nav>
+        <div class="container" id="container">
+            <div class="welcome">
+                <div class="title">
+                    <h1>new arrivals</h1>
+                    <p>casual wear</p>
+                </div>
+                <div class="box">
+                    <div class="wrapper">
+                        <img src="./img/p3.jpeg" alt="">
+                        <span> <i class="fa-solid fa-sack-dollar"></i> 1,000</span>
+                    </div>
+                    <div class="wrapper" style="margin-top: -6%;">
+                        <img src="./img/p2.jpeg" alt="">
+                        <span><i class="fa-solid fa-sack-dollar"></i> 7,500</span>
+                    </div>
+                    <div class="wrapper">
+                        <img src="./img/p1.jpeg" alt="">
+                        <span><i class="fa-solid fa-sack-dollar"></i> 1,500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="sec1">
+            <img src="./img/sec2.jpg"/>
+            <div class="sec2_over">
+            </div>
+            <div class="overboard">
+                <!-- <h1>Get Yours Now</h1> -->
+                <h2>Exclusive Classy Collections</h2>
+                <button class="sec2_btn">Shop Now</button>
+                                </div>
+            <div></div>
+        </section>
+        <section class="in_product">
+            <h2>Our Collections</h2>
+            <div class="sec3_over" id="product_catalogs">
+            </div>
+        </section>
+    </main>
+     <section class="offer">
+        <img src="./img/nordwood-themes-Nv4QHkTVEaI-unsplash.jpg" alt="">
+        <div class="sec2_over two">
+            <div class="two mid">
+                <div>
+                    <h1>Mid Season Sale
+                        Up to 60%
+                       </h1>
+                       <button class="sec2_btn"> ExpLore <i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+    <script>
+
+        const navMenu = document.getElementById("navMenu");
+
+        function showMenu(){
+            navMenu.style.left = "0";
+        }
+
+        function hideMenu(){
+            navMenu.style.left = "";
+
+        }
+
+
+        const background = document.getElementById("container");
+        let x = 0;
+            let img = ["./img/p1.jpeg", "./img/p2.jpeg", "./img/p3.jpeg"]
+        function changeImg(){
+            background.style.backgroundImage = "url('"+ img[x] +"')";
+            x = (x + 1) % 3;
+
+           return(img[x])
+        }
+        console.log(changeImg())
+
+        setInterval(changeImg, 3000)
+//         function showProductMenu(e) {
+//             const a = document.querySelectorAll("products");
+
+// const cursor = document.getElementById("cursor");
+
+// a.forEach((item) => {
+//   const interaction = item.dataset.interaction;
+
+//   item.addEventListener("mouseover", () => {
+//     cursor.classList.add(interaction);
+//   });
+//   item.addEventListener("mouseleave", (event) => {
+//     cursor.classList.remove(interaction);
+//   });
+// });
+//         }
+    </script>
+    <script src="./js/kira.js"></script>
+</body>
+</html>
